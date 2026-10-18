@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruang Novel</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS website -->
+  <link rel="stylesheet" href="stayle.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="#home">
+        Ruang Novel
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+
+          <a class="nav-link" href="#login">Login</a>
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#novel">Koleksi Novel</a>
+          <a class="nav-link" href="#detail-novel">Detail Novel</a>
+          <a class="nav-link" href="#tentang">Tentang</a>
+
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Login -->
+ <div class="container-fluid py-5" id="login">
+    <div class="row justify-content-center">
+      <div class="col-md-5 col-lg-4">
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="fas fa-user-circle fa-3x text-danger"></i>
+              <h3 class="mt-3">login</h3>
+              <p>Ruang Novel ♡ </p>
+            </div>
+
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="username" class="form-label">
+                  Username atau Email
+                </label>
+                <input type="text" class="form-control" id="username" placeholder="Masukkan username atau email">
+                <small class="text-danger" id="usernameError"></small>
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">
+                  Password
+                </label>
+                <input type="password" class="form-control" id="password" placeholder="Masukkan password">
+                <small class="text-danger" id="passwordError"></small>
+              </div>
+
+              <button type="submit" class="btn btn-danger w-100">
+                Login
+              </button>
+
+              <div id="loginMessage" class="mt-3 text-center" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="d-flex" id="searchForm">
+    <input class="form-control me-2" type="search" id="searchInput" placeholder="Cari novel..." aria-label="Cari novel">
+
+    <button class="btn btn-outline-success" type="submit">
+      Cari
+    </button>
+  </form>
+
+  <!-- HOME -->
+  <header id="home" class="hero">
+    <div class="position-relative text-center" style="height: 600px; overflow: hidden;300p">
+
+      <img src="gambar/gambar1.jpeg" alt="Gambar utama Ruang Novel" class="w-100 h-100" style="object-fit: cover;">
+
+      <div class="position-absolute top-50 start-50 translate-middle
+                text-white w-100 px-3">
+
+        <h1 class="fw-bold display-4">
+          Selamat Datang di<br>Ruang Novel
+        </h1>
+
+        <p>Temukan cerita favoritmu dan jelajahi dunia imajinasi.</p>
+
+        <a href="#novel" class="btn btn-success btn-lg">
+          Jelajahi Novel →
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- KOLEKSI NOVEL PILIHAN -->
+  <main class="container py-5" id="novel">
+
+    <h2 class="fw-bold mb-2">Novel Pilihan</h2>
+    <p class="text-secondary mb-4">
+     Setiap halaman menyimpan cerita, setiap cerita memiliki makna✨
+    </p>
+
+    <p id="hasilPencarian" class="text-secondary" aria-live="polite"></p>
+
+    <button id="tombolSemua" class="btn btn-outline-secondary mb-3" type="button" hidden>
+      Tampilkan Semua Novel
+    </button>
+
+    <div id="daftarNovel" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+      <!-- SEMUA NOVEL -->
+  </main class="container py-5" id="novel">
+  <div class="row g-4">
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/7 wishes.jpeg" class="card-img-top" alt="Sampul novel 7 Wishes">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">7 Wishes</h5>
+          <p class="text-secondary small">Fiksi, persahabatan, drama keluarga</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Asiah (MwizaMonat)</p>
+              <p><strong>Penerbit:</strong> Choko Publisher</p>
+              <p><strong>Genre:</strong> persahabatan</p>
+              <p><strong>Jumlah halaman:</strong> 340</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Novel 7 Wishes mengisahkan tujuh remaja penyandang disabilitas di Panti Asuhan Cahaya Harapan yang
+                saling bahu-membahu untuk mewujudkan impian sederhana satu sama lain. Harapan-harapan tersebut mereka
+                tulis dan simpan di dalam sebuah kotak kayu tua, mulai dari keinginan untuk bisa melihat, mendengar,
+                berjalan, hingga perjuangan salah satu dari mereka melawan kanker otak stadium lanjut. Cerita ini
+                berfokus pada kehangatan persaudaraan, konflik batin dengan keluarga yang menelantarkan mereka, serta
+                perjuangan emosional yang mengharukan di tengah keterbatasan fisik.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/0 mdpl.jpeg" class="card-img-top" alt="Sampul novel 0 MDPL">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">0 MDPL</h5>
+          <p class="text-secondary small">Romantis</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Nurwina Sari</p>
+              <p><strong>Penerbit:</strong> Romancius </p>
+              <p><strong>Genre:</strong> Romantis </p>
+              <p><strong>Jumlah halaman:</strong> 300 </p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Novel ini berfokus pada kehidupan Rangga Raja setelah melewati kisah pilu di Gunung Rinjani (3726
+                MDPL). Setelah ditinggal nikah/bertunangan oleh cinta pertamanya, Andini Hangura, Rangga harus kembali
+                ke "titik nol" (0 meter di atas permukaan laut) untuk menyembuhkan luka hatinya dan melanjutkan
+                hidup.</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/novel mdpl.jpeg" class="card-img-top" alt="Sampul novel Hotel Magnifique">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">3726 MDPL</h5>
+          <p class="text-secondary small">Romantis</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Nurwina Sari </p>
+              <p><strong>Penerbit:</strong> Romancius </p>
+              <p><strong>Genre:</strong> Romantis </p>
+              <p><strong>Jumlah halaman:</strong> 280 </p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Novel 3726 MDPL mengisahkan perjuangan cinta Rangga Raja, mahasiswa Kehutanan yang juga menjabat
+                sebagai ketua pelaksana OSPEK, dalam mengejar cinta Andini Hangura. Perjalanan asmara mereka dibalut
+                dengan latar belakang dunia pendakian dan tekad kuat untuk menaklukkan puncak Gunung Rinjani.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/kamar no 7.jpeg" class="card-img-top" alt="Sampul novel Kamar No. 7">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Kamar No. 7</h5>
+          <p class="text-secondary small">Horor, misteri</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Hanifa Azzahrra</p>
+              <p><strong>Penerbit:</strong> Media Kita</p>
+              <p><strong>Genre:</strong> Horor, misteri, thriller psikologis, fiksi remaja</p>
+              <p><strong>Jumlah halaman:</strong> 324</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Cerita ini mengikuti kisah tujuh siswa yang dipaksa tinggal bersama di Kamar Nomor 7 di asrama elit
+                Maitra Boarding School. Kamar tersebut diselimuti rumor terkutuk karena selalu memakan korban jiwa
+                setiap tahunnya. Sejak malam pertama menempatinya, ketujuh remaja ini langsung dihadapkan pada
+                serangkaian teror mistis dan ancaman berbahaya. Demi bertahan hidup, mereka terpaksa bersatu untuk
+                menyelidiki misteri masa lalu sekolah, yang perlahan mengungkap konspirasi besar, aksi balas dendam,
+                serta rahasia kelam dari masing-masing penghuni kamar.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/apertemen 119.jpeg" class="card-img-top" alt="Sampul novel Apartemen 119">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Apartemen 119</h5>
+          <p class="text-secondary small">Misteri, drama</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Audi</p>
+              <p><strong>Penerbit:</strong> Red Swan Book</p>
+              <p><strong>Genre:</strong> Horor, misteri, thriller psikologis, fiksi remaja</p>
+              <p><strong>Jumlah halaman:</strong> 304</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Cerita berpusat pada tujuh remaja yang tinggal bersama di sebuah unit apartemen. Awalnya kehidupan
+                mereka berjalan normal, namun berubah drastis setelah salah satu dari mereka ditemukan tewas mengenaskan
+                di dalam kamarnya. Kematian yang misterius ini memicu serangkaian teror mistis dan psikologis di dalam
+                apartemen. Keadaan semakin mencekam ketika rasa saling curiga mulai tumbuh di antara enam remaja yang
+                tersisa, sementara rahasia kelam masa lalu mereka satu per satu mulai terungkap.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/Seposi mei ayam sebelum mati.jpeg" class="card-img-top" alt="Ayah Putrimu Lelah">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Seporsi Mie Ayam</h5>
+          <p class="text-secondary small">fiksi</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Brian Khisna</p>
+              <p><strong>Penerbit:</strong> Grasindo</p>
+              <p><strong>Genre:</strong> Fiksi</p>
+              <p><strong>Jumlah halaman:</strong> 216</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Seporsi Mie Ayam Sebelum Mati" mengisahkan Ale, pria depresi yang memutuskan mengakhiri hidupnya dalam
+                24 jam. Namun, sebelum mati, ia hanya ingin menyantap seporsi mie ayam terakhir. Ketika warung
+                langganannya tutup, perjalanan mencari mie ayam tersebut justru mempertemukannya dengan orang-orang baru
+                yang perlahan mengubah cara pandang.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/ayahku bukan pembohong.jpeg" class="card-img-top" alt="Sampul novel Ayahku Bukan Pembohong">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Ayahku Bukan Pembohong</h5>
+          <p class="text-secondary small">Fiksi, keluarga</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Tere Liye</p>
+              <p><strong>Penerbit:</strong> Gramedia Pustaka Utama</p>
+              <p><strong>Genre:</strong> Fiksi, keluarga</p>
+              <p><strong>Jumlah halaman:</strong> 304</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Cerita berpusat pada Dam yang dibesarkan oleh cerita-cerita dongeng luar biasa dari ayahnya tentang
+                masa lalu. Ketika beranjak dewasa, Dam mulai merasa ayahnya membohongi dirinya karena cerita tersebut
+                dirasa tidak masuk akal. Hubungan mereka pun merenggang akibat konflik kepercayaan ini, hingga akhirnya
+                sebuah rahasia besar terungkap setelah sang ayah tiada.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/dia razi.jpeg" class="card-img-top" alt="Sampul novel Dia Razi">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Dia Razi</h5>
+          <p class="text-secondary small">Romantis, fiksi remaja</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Nurwina Sari</p>
+              <p><strong>Penerbit:</strong> Romancius</p>
+              <p><strong>Genre:</strong> Romantis, fiksi remaja</p>
+              <p><strong>Jumlah halaman:</strong> 320</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Novel Dia Razi mengisahkan Razi, seorang cowok dingin, tertutup, dan sangat fokus pada dunia basket
+                serta masa depannya tanpa memikirkan urusan asmara. Namun, prinsip hidupnya yang tenang dan anti-pacaran
+                mulai berubah setelah ia bertemu dengan Ilusi, seorang gadis misterius yang diam-diam jago bermain
+                basket. Kehadiran Ilusi berhasil mencuri perhatian Razi dan membawa sang kapten basket masuk ke dalam
+                lika-liku kisah cinta remaja yang rumit.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/jeffrey.jpeg" class="card-img-top" alt="Sampul novel Jeffrey">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Don't Throw Me Away</h5>
+          <p class="text-secondary small">Fantasy-Romance, Kerajaa</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Dekdi A</p>
+              <p><strong>Penerbit:</strong> Reneluv</p>
+              <p><strong>Genre:</strong> Fantasy-Romance, Kerajaa, dan Time-Travels</p>
+              <p><strong>Jumlah halaman:</strong> 412</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Julian Rozeanne Pollin tewas mengenaskan setelah dikhianati dan dibuang secara kejam oleh suaminya
+                sendiri, Raja Jeffrey Narenth Felipe. Namun, ia secara ajaib terbangun kembali ke masa 10 tahun lalu,
+                sebelum pernikahan tragis itu terjadi. Berbekal ingatan masa depan, Julian bertekad kuat untuk mengubah
+                takdir, menjauhi Jeffrey, dan menyelamatkan dirinya dari kehancuran yang sama.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/lotusin the mud.jpeg" class="card-img-top" alt="Sampul novel Lotus in the Mud">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Lotus in the Mud</h5>
+          <p class="text-secondary small">Drama, romantis</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Annelie</p>
+              <p><strong>Penerbit:</strong> Akad</p>
+              <p><strong>Genre:</strong> Drama, romantis</p>
+              <p><strong>Jumlah halaman:</strong> 480</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Lotus in the Mud mengisahkan hubungan hurt-comfort antara Audine dan Ocean yang sama-sama rapuh untuk
+                saling menyembuhkan trauma masa lalu. Mengangkat filosofi bunga lotus, cerita ini berfokus pada
+                perjuangan bangkit dari keterpurukan dan proses self-healing demi masa depan yang lebih baik.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/hotel magnifique.jpeg" class="card-img-top" alt="Sampul novel Novel MDPL">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Hotel Magnifique</h5>
+          <p class="text-secondary small">Fantasy</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Emily J. Taylor</p>
+              <p><strong>Penerbit:</strong> Noura Books</p>
+              <p><strong>Genre:</strong> Fantasy</p>
+              <p><strong>Jumlah halaman:</strong> 416</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Jani dan adiknya, Zosa, bekerja di Hotel Magnifique—sebuah hotel ajaib yang berpindah lokasi ke seluruh
+                dunia setiap tengah malam. Namun, di balik kemewahan dan keajaibannya, Jani menemukan bahwa para staf
+                terjebak dalam kontrak sihir yang berbahaya dan ingatan mereka dimanipulasi. Bersama seorang pelayan
+                misterius bernama Bel, Jani harus bertaruh nyawa membongkar rahasia kelam sang pemilik hotel demi
+                menyelamatkan adiknya sebelum mereka terjebak selamanya.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card">
+        <img src="gambar/Yang Katanya Cemara.jpeg" class="card-img-top" alt="Sampul novel Novel MDPL">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Yang Katanya Cemara</h5>
+          <p class="text-secondary small">Fiksi Remaja, Drama Keluarga, Family</p>
+          <details class="mt-auto">
+            <summary class="btn btn-outline-success w-100">Lihat Detail</summary>
+            <div class="detail-novel">
+              <p><strong>Penulis:</strong> Vania Winola</p>
+              <p><strong>Penerbit:</strong> Bukune</p>
+              <p><strong>Genre:</strong> Fiksi Remaja, Drama Keluarga, Family</p>
+              <p><strong>Jumlah halaman:</strong> 224</p>
+              <hr>
+              <strong>Sinopsis</strong>
+              <p>Mengisahkan tentang Vania, seorang gadis yang tumbuh dengan impian memiliki keluarga utuh dan harmonis
+                layaknya analogi "Keluarga Cemara." Namun, ia harus menghadapi kenyataan pahit saat kedua orang tuanya
+                memutuskan untuk bercerai (broken home). Melalui catatan harian dan coretan polos masa kecilnya, Vania
+                berjuang merawat luka batin, menghadapi perubahan hidup, dan belajar menerima realitas bahwa tidak semua
+                keluarga bisa menjadi "Cemara".</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </main>
+
+  <!-- DETAIL NOVEL -->
+  <section class="container py-5" id="detail-novel">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Detail Novel</h2>
+      <p class="text-secondary">
+        Jelajahi novel pilihan mu , temukan kisah menarik, dan kenali setiap cerita di balik halamannya 📚✨
+      </p>
+    </div>
+    <div class="row g-4 align-items-center mb-5" id="detail-7-wishes">
+      <div class="col-md-4 text-center" id="7-wishes">
+        <img src="gambar/7 wishes.jpeg" alt="Sampul 7 Wishes" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">7 Wishes</h3>
+        <p><strong>Penulis:</strong> Asiah (MwizaMonat)</p>
+        <p><strong>Penerbit:</strong> Choko Publisher</p>
+        <p><strong>Genre:</strong> Fiksi, Persahabatan, Drama Keluarga</p>
+        <p><strong>Jumlah halaman:</strong> 340 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Tujuh remaja penyandang disabilitas di Panti Asuhan Cahaya Harapan saling membantu mewujudkan impian
+          mereka. Melalui berbagai tantangan dan konflik keluarga, mereka belajar tentang harapan, persahabatan, dan
+          arti kebersamaan.</p>
+        <h5>Pesan Moral</h5>
+        <p>Keterbatasan bukan penghalang untuk bermimpi. Persahabatan dan kepedulian dapat memberikan kekuatan untuk
+          menghadapi kesulitan.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-0-mdpl">
+      <div class="col-md-4 text-center">
+        <img src="gambar/0 mdpl.jpeg" alt="Sampul 0 MDPL" class="img-fluid rounded shadow" style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">0 MDPL</h3>
+        <p><strong>Penulis:</strong> Nurwina Sari</p>
+        <p><strong>Penerbit:</strong> Romancius</p>
+        <p><strong>Genre:</strong> Romantis, Drama</p>
+        <p><strong>Jumlah halaman:</strong> 300 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Rangga Raja berusaha bangkit setelah kehilangan cinta pertamanya, Andini Hangura. Ia harus menerima
+          kenyataan, menyembuhkan luka hati, dan menemukan kembali arah hidupnya setelah hubungan yang diharapkannya
+          tidak berjalan sesuai keinginan.</p>
+        <h5>Pesan Moral</h5>
+        <p>Kehilangan bukan akhir dari segalanya. Kita perlu belajar menerima kenyataan dan melanjutkan hidup.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-3726-mdpl">
+      <div class="col-md-4 text-center">
+        <img src="gambar/novel mdpl.jpeg" alt="Sampul 3726 MDPL" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">3726 MDPL</h3>
+        <p><strong>Penulis:</strong> Nurwina Sari</p>
+        <p><strong>Penerbit:</strong> Romancius</p>
+        <p><strong>Genre:</strong> Romantis, Drama</p>
+        <p><strong>Jumlah halaman:</strong> 280 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Rangga Raja, mahasiswa kehutanan sekaligus ketua pelaksana OSPEK, berjuang mengejar cinta Andini Hangura.
+          Kisah mereka berpadu dengan dunia pendakian dan perjuangan mencapai puncak Gunung Rinjani.</p>
+        <h5>Pesan Moral</h5>
+        <p>Perjuangan membutuhkan keberanian, kesabaran, dan tekad. Namun, perasaan orang lain juga harus dihargai.
+        </p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-kamar-no-7">
+      <div class="col-md-4 text-center">
+        <img src="gambar/kamar no 7.jpeg" alt="Sampul Kamar No. 7" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Kamar No. 7</h3>
+        <p><strong>Penulis:</strong> Hanifa Azzahrra</p>
+        <p><strong>Penerbit:</strong> Media Kita</p>
+        <p><strong>Genre:</strong> Horor, Misteri, Thriller Psikologis</p>
+        <p><strong>Jumlah halaman:</strong> 324 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Tujuh siswa di Maitra Boarding School harus tinggal di Kamar Nomor 7 yang terkenal terkutuk. Berbagai
+          teror dan kejadian misterius memaksa mereka bekerja sama untuk mengungkap rahasia kelam sekolah.</p>
+        <h5>Pesan Moral</h5>
+        <p>Keberanian, kerja sama, dan kepercayaan sangat penting ketika menghadapi bahaya dan misteri.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-apartemen-119">
+      <div class="col-md-4 text-center">
+        <img src="gambar/apertemen 119.jpeg" alt="Sampul Apartemen 119" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Apartemen 119</h3>
+        <p><strong>Penulis:</strong> Audi</p>
+        <p><strong>Penerbit:</strong> Red Swan Book</p>
+        <p><strong>Genre:</strong> Misteri, Horor, Thriller Psikologis</p>
+        <p><strong>Jumlah halaman:</strong> 304 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Kehidupan tujuh remaja di sebuah apartemen berubah setelah salah satu dari mereka ditemukan tewas.
+          Kematian misterius tersebut memicu rasa curiga, teror, dan terbongkarnya rahasia masa lalu para penghuni.
+        </p>
+        <h5>Pesan Moral</h5>
+        <p>Jangan mudah menuduh orang lain. Cari kebenaran dengan teliti sebelum mengambil keputusan.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-seporsi-mie-ayam">
+      <div class="col-md-4 text-center">
+        <img src="gambar/Seposi mei ayam sebelum mati.jpeg" alt="Sampul Seporsi Mie Ayam Sebelum Mati"
+          class="img-fluid rounded shadow" style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Seporsi Mie Ayam Sebelum Mati</h3>
+        <p><strong>Penulis:</strong> Brian Khrisna</p>
+        <p><strong>Penerbit:</strong> Grasindo</p>
+        <p><strong>Genre:</strong> Fiksi, Drama</p>
+        <p><strong>Jumlah halaman:</strong> 216 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Ale, seorang pria yang sedang mengalami masa sulit, ingin menikmati seporsi mie ayam untuk terakhir
+          kalinya. Perjalanan mencari makanan tersebut mempertemukannya dengan orang-orang yang perlahan mengubah
+          cara pandangnya terhadap kehidupan.</p>
+        <h5>Pesan Moral</h5>
+        <p>Hal-hal sederhana dan kebaikan dari orang lain dapat memberikan harapan baru. Penting untuk mencari
+          dukungan ketika menghadapi masa sulit.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-ayahku-bukan-pembohong">
+      <div class="col-md-4 text-center">
+        <img src="gambar/ayahku bukan pembohong.jpeg" alt="Sampul Ayahku Bukan Pembohong"
+          class="img-fluid rounded shadow" style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Ayahku Bukan Pembohong</h3>
+        <p><strong>Penulis:</strong> Tere Liye</p>
+        <p><strong>Penerbit:</strong> Gramedia Pustaka Utama</p>
+        <p><strong>Genre:</strong> Fiksi, Drama Keluarga</p>
+        <p><strong>Jumlah halaman:</strong> 304 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Dam tumbuh dengan cerita luar biasa dari ayahnya. Saat dewasa, ia mulai meragukan cerita tersebut.
+          Seiring waktu, Dam belajar memahami nilai kehidupan dan kasih sayang yang ingin disampaikan ayahnya.</p>
+        <h5>Pesan Moral</h5>
+        <p>Kebahagiaan tidak selalu berasal dari kekayaan, tetapi juga dari kesederhanaan, kasih sayang, dan rasa
+          syukur.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-dia-razi">
+      <div class="col-md-4 text-center">
+        <img src="gambar/dia razi.jpeg" alt="Sampul Dia Razi" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Dia Razi</h3>
+        <p><strong>Penulis:</strong> Nurwina Sari</p>
+        <p><strong>Penerbit:</strong> Romancius</p>
+        <p><strong>Genre:</strong> Romantis, Fiksi Remaja</p>
+        <p><strong>Jumlah halaman:</strong> 320 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Razi adalah cowok dingin yang fokus pada basket dan masa depannya. Prinsipnya mulai berubah setelah
+          bertemu Ilusi, seorang gadis misterius yang juga memiliki kemampuan bermain basket.</p>
+        <h5>Pesan Moral</h5>
+        <p>Jangan menutup diri terhadap perubahan. Mengenal seseorang dapat mengajarkan kita memahami perasaan dan
+          sudut pandang baru.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-dont-throw-me-away">
+      <div class="col-md-4 text-center">
+        <img src="gambar/jeffrey.jpeg" alt="Sampul Don't Throw Me Away" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Jeffrey :Don't Throw Me Away</h3>
+        <p><strong>Penulis:</strong> Dekdi A</p>
+        <p><strong>Penerbit:</strong> Reneluv</p>
+        <p><strong>Genre:</strong> Fantasi, Romantis, Kerajaan, Perjalanan Waktu</p>
+        <p><strong>Jumlah halaman:</strong> 412 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Julian Rozeanne Pollin dikhianati dan dibuang oleh suaminya, Raja Jeffrey Narenth Felipe. Ia kemudian
+          kembali ke masa sepuluh tahun sebelumnya dan berusaha mengubah takdir agar tidak mengalami kehancuran yang
+          sama.</p>
+        <h5>Pesan Moral</h5>
+        <p>Jangan kehilangan harga diri demi orang lain. Kesempatan kedua dapat digunakan untuk memperbaiki
+          keputusan dan menentukan masa depan.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-lotus-in-the-mud">
+      <div class="col-md-4 text-center">
+        <img src="gambar/lotusin the mud.jpeg" alt="Sampul Lotus in the Mud" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Lotus in the Mud</h3>
+        <p><strong>Penulis:</strong> Annelie</p>
+        <p><strong>Penerbit:</strong> Akad</p>
+        <p><strong>Genre:</strong> Drama, Romantis</p>
+        <p><strong>Jumlah halaman:</strong> 480 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Audine dan Ocean adalah dua orang yang sama-sama menghadapi luka masa lalu. Hubungan mereka menjadi
+          perjalanan untuk saling memahami, menghadapi trauma, dan menemukan kesempatan untuk pulih.</p>
+        <h5>Pesan Moral</h5>
+        <p>Setiap orang memiliki perjuangannya sendiri. Kesabaran, penerimaan, dan dukungan dapat membantu proses
+          penyembuhan diri.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-hotel-magnifique">
+      <div class="col-md-4 text-center">
+        <img src="gambar/hotel magnifique.jpeg" alt="Sampul Hotel Magnifique" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Hotel Magnifique</h3>
+        <p><strong>Penulis:</strong> Emily J. Taylor</p>
+        <p><strong>Penerbit:</strong> Noura Books</p>
+        <p><strong>Genre:</strong> Fantasi, Misteri, Petualangan</p>
+        <p><strong>Jumlah halaman:</strong> 416 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Jani dan adiknya, Zosa, memasuki Hotel Magnifique, hotel ajaib yang berpindah tempat setiap tengah malam.
+          Di balik kemewahannya, Jani menemukan kontrak sihir berbahaya dan berusaha mengungkap rahasia pemilik
+          hotel demi menyelamatkan adiknya.</p>
+        <h5>Pesan Moral</h5>
+        <p>Kasih sayang keluarga, keberanian, dan keteguhan hati dapat membantu kita menghadapi bahaya.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row g-4 align-items-center mb-5" id="detail-yang-katanya-cemara">
+      <div class="col-md-4 text-center">
+        <img src="gambar/Yang Katanya Cemara.jpeg" alt="Sampul Yang Katanya Cemara" class="img-fluid rounded shadow"
+          style="max-height:350px;">
+      </div>
+      <div class="col-md-8">
+        <h3 class="fw-bold">Yang Katanya Cemara</h3>
+        <p><strong>Penulis:</strong> Vania Winola</p>
+        <p><strong>Penerbit:</strong> Bukune</p>
+        <p><strong>Genre:</strong> Fiksi Remaja, Drama Keluarga</p>
+        <p><strong>Jumlah halaman:</strong> 224 halaman</p>
+        <hr>
+        <h5>Sinopsis</h5>
+        <p>Vania bermimpi memiliki keluarga yang utuh dan harmonis. Namun, perceraian orang tuanya membuat ia harus
+          menghadapi kenyataan yang menyakitkan dan belajar menerima perubahan dalam keluarganya.</p>
+        <h5>Pesan Moral</h5>
+        <p>Tidak semua keluarga memiliki cerita yang sempurna. Kita perlu belajar menerima keadaan, menghargai diri
+          sendiri, dan tetap memiliki harapan.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TENTANG -->
+  <section id="tentang" class="tentang-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="section-title">Mengenal Ruang Novel</h1>
+        <p class="text-secondary">
+          Ruang Novel adalah website katalog untuk membantu pembaca
+          menjelajahi berbagai pilihan novel, menemukan cerita menarik,
+          dan mengenal dunia imajinasi.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="tentang-card h-100">
+            <h3>Tujuan Website</h3>
+            <p>
+              Menyajikan informasi novel secara teratur, mulai dari
+              judul, genre, gambar sampul, hingga ringkasan cerita.
+              Dengan begitu, pembaca dapat menemukan novel yang disukai.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="tentang-card h-100">
+            <h3>Fitur Ruang Novel</h3>
+            <ul>
+              <li>Melihat 12 koleksi novel.</li>
+              <li>Membaca detail novel langsung di bawah sampul.</li>
+              <li>Mengenal genre dan sinopsis.</li>
+              <li>Mencoba validasi formulir login.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center py-4">
+    <div class="container">
+      <h5 class="fw-bold">📚 Ruang Novel</h5>
+      <p class="mb-0">
+        2026 Ruang Novel — Temukan cerita, temukan dunia.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript untuk navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript khusus login -->
+  <script src="script.js"></script>
+
+</body>
+</html>

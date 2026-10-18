@@ -1,0 +1,277 @@
+/* ===== LOGIN RUANG NOVEL ===== */
+#login {
+    background: #f0f8f1;
+    border-radius: 0;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#login .card {
+    background: #fff;
+    border: 1px solid #d5e8d8;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+#login .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46,125,50,.15);
+}
+
+#login .fa-user-circle { color: #2e7d32 !important; }
+#login h3 { color: #1b5e20; font-weight: bold; }
+#login p { color: #6b8e70; }
+#login .form-label { color: #285c35; font-weight: 600; }
+
+#login .form-control {
+    border: 1px solid #b7d7bd;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+#login .form-control:focus {
+    border-color: #43a047;
+    box-shadow: 0 0 0 .2rem rgba(67,160,71,.15);
+}
+
+#login .btn-danger {
+    background: linear-gradient(135deg,#43a047,#1b5e20);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+#login .btn-danger:hover {
+    background: linear-gradient(135deg,#2e7d32,#10451d);
+    transform: scale(1.02);
+}
+
+#loginMessage { font-weight: 600; }
+
+
+/* Pesan error berwarna merah */
+.pesan-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Pesan berhasil berwarna hijau */
+.pesan-sukses {
+    color: green;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+/* ===== PENCARIAN NOVEL ===== */
+#searchForm {
+    max-width: 2000px;
+    margin: 25px auto;
+    padding: 10px;
+    background: #f0f8f1;
+    border-radius: 15px;
+}
+
+#searchInput {
+    border: 1px solid #a5cfa9;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+#searchInput:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 .2rem rgba(46,125,50,.15);
+}
+
+#searchForm .btn:hover { background: #1b5e20; }
+
+/* ===== DETAIL NOVEL ===== */
+#detail-novel .text-center {
+    background: linear-gradient(135deg,#e8f5e9,#fdfcf7);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(53,94,59,.15);
+}
+
+#detail-novel h2,
+#novel h2 {
+    color: #355e3b;
+    font-weight: bold;
+}
+
+#detail-novel h2 {
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+#detail-novel h2::after,
+#novel h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: #91b89a;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+#detail-novel h2::after {
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#detail-novel p { color: #5f6f60; }
+
+/* ===== NOVEL PILIHAN ===== */
+#novel {
+    background: linear-gradient(135deg,#e8f5e9,#fdfcf7);
+    padding: 40px !important;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(53,94,59,.15);
+    margin: 30px auto;
+}
+
+#novel h2 {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+#novel h2::after { width: 80px; }
+
+#novel > p {
+    color: #5f6f60 !important;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ===== TENTANG RUANG NOVEL ===== */
+
+.tentang-section {
+    background: linear-gradient(135deg,#e8f5e9,#f5faf3,#d9edda);
+    padding: 70px 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.tentang-section .section-title {
+    color: #1b5e20;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.tentang-section .section-title::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 5px;
+    background: linear-gradient(to right,#81c784,#2e7d32);
+    border-radius: 10px;
+    margin: 18px auto 0;
+}
+
+.tentang-section .text-secondary {
+    color: #526b57 !important;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.tentang-card {
+    background: rgba(255,255,255,.92);
+    padding: 32px;
+    border-radius: 22px;
+    height: 100%;
+    border: 1px solid #d5e8d6;
+    box-shadow: 0 8px 25px rgba(46,125,50,.09);
+    transition: .3s;
+}
+
+.tentang-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(46,125,50,.17);
+    border-color: #81c784;
+}
+
+.tentang-card h3 {
+    color: #1b5e20;
+    font-weight: 750;
+    font-size: 1.45rem;
+    margin-bottom: 18px;
+}
+
+.tentang-card p,
+.tentang-card ul li {
+    color: #526b57;
+    line-height: 1.9;
+}
+
+.tentang-card p {
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.tentang-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tentang-card ul li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(135deg,#1b5e20,#2e7d32);
+    color: white;
+    border-top: 4px solid #a5d6a7;
+}
+
+.footer h5 {
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #e4f3e5;
+    font-size: .95rem;
+}
+
+/* ===== RESPONSIVE HP ===== */
+@media (max-width: 576px) {
+    #novel {
+        padding: 25px !important;
+        border-radius: 15px;
+    }
+
+    #novel h2 { font-size: 28px; }
+    #novel > p { font-size: 15px; }
+
+    .tentang-section { padding: 45px 0; }
+
+    .tentang-section .section-title { font-size: 1.8rem; }
+
+    .tentang-section .text-secondary {
+        font-size: .95rem;
+        padding: 0 10px;
+    }
+
+    .tentang-card {
+        padding: 23px;
+        border-radius: 17px;
+    }
+
+    .tentang-card h3 { font-size: 1.25rem; }
+}
