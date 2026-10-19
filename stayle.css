@@ -68,90 +68,217 @@
     margin-top: 8px;
 }
 
+/* ===== KOLEKSI NOVEL ===== */
+#novel {
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 35px !important;
+    background-color: #fffafc;
+    scroll-margin-top: 85px;
+}
 
-/* ===== PENCARIAN NOVEL ===== */
-#searchForm {
-    max-width: 2000px;
-    margin: 25px auto;
-    padding: 10px;
-    background: #f0f8f1;
+/* BAGIAN JUDUL NOVEL */
+#novel > .text-center:first-child {
+    background: linear-gradient(135deg, #e4f2e5, #f5faf4, #dcefe0);
+    padding: 35px 15px;
+    border-radius: 16px;
+    margin-bottom: 35px !important;
+}
+
+/* WARNA JUDUL NOVEL PILIHAN */
+#novel > .text-center h2 {
+    color: #1b5e20;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+/* DESKRIPSI DI BAWAH JUDUL */
+#novel > .text-center p {
+    color: #55745b !important;
+    font-size: 17px;
+    margin-bottom: 0 !important;
+}
+
+/* DAFTAR KARTU NOVEL */
+#daftarNovel {
+    margin-top: 25px;
+}
+
+/* KARTU NOVEL */
+#daftarNovel .card {
+    height: 100%;
+    border: 1px solid #e1eee3;
     border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 80, 45, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#searchInput {
-    border: 1px solid #a5cfa9;
-    border-radius: 10px;
-    padding: 10px 15px;
+/* EFEK SAAT KURSOR DI ATAS KARTU */
+#daftarNovel .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 22px rgba(37, 80, 45, 0.16);
 }
 
-#searchInput:focus {
-    border-color: #2e7d32;
-    box-shadow: 0 0 0 .2rem rgba(46,125,50,.15);
+/* GAMBAR SAMPUL NOVEL */
+#daftarNovel .card-img-top {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    padding: 12px;
+    background-color: #f6faf6;
 }
 
-#searchForm .btn:hover { background: #1b5e20; }
+/* ISI KARTU */
+#daftarNovel .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px;
+}
+
+/* JUDUL SETIAP NOVEL */
+#daftarNovel .card-title {
+    color: #216b3a;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* KETERANGAN NOVEL */
+#daftarNovel .card-text {
+    color: #5c665e;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* TOMBOL DI KARTU NOVEL */
+#daftarNovel .btn {
+    margin-top: auto;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* TOMBOL LIHAT DETAIL */
+#daftarNovel .btn-outline-success {
+    color: #216b3a;
+    border-color: #216b3a;
+}
+
+#daftarNovel .btn-outline-success:hover {
+    color: #ffffff;
+    background-color: #216b3a;
+}
+
+/* TOMBOL TAMPILKAN SEMUA NOVEL */
+#tombolSemua {
+    color: #216b3a;
+    border-color: #216b3a;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#tombolSemua:hover {
+    color: #ffffff;
+    background-color: #216b3a;
+}
+
+/* PESAN HASIL PENCARIAN */
+#hasilPencarian {
+    color: #55745b !important;
+    margin-bottom: 20px;
+}
+
 
 /* ===== DETAIL NOVEL ===== */
-#detail-novel .text-center {
-    background: linear-gradient(135deg,#e8f5e9,#fdfcf7);
-    padding: 40px 20px;
-    border-radius: 20px;
-    box-shadow: 0 5px 18px rgba(53,94,59,.15);
+#detail-novel {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    background: #ffffff;
 }
 
-#detail-novel h2,
-#novel h2 {
-    color: #355e3b;
-    font-weight: bold;
+/* Latar judul hijau muda */
+#detail-novel .text-center:first-child {
+    background: linear-gradient(120deg, #e4f2e5, #f5faf4, #e0f0e1);
+    padding: 30px 15px;
+    border-radius: 8px;
+    margin-bottom: 35px !important;
 }
 
-#detail-novel h2 {
+/* Judul hijau tua */
+#detail-novel .text-center h2,
+.tentang-section .section-title {
+    color: #1b5e20;
     font-size: 38px;
-    letter-spacing: 2px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 18px;
 }
 
-#detail-novel h2::after,
-#novel h2::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background: #91b89a;
+/* Garis gradasi */
+#detail-novel .judul-garis {
+    width: 120px;
+    height: 8px;
+    background: linear-gradient(to right, #81c784, #2e7d32);
     border-radius: 10px;
-    margin-top: 12px;
+    margin: 20px auto 25px;
 }
 
-#detail-novel h2::after {
-    width: 90px;
-    margin-left: auto;
-    margin-right: auto;
+/* Deskripsi */
+#detail-novel .deskripsi-detail {
+    color: #42645d;
+    font-size: 20px;
+    margin-bottom: 0;
 }
 
-#detail-novel p { color: #5f6f60; }
-
-/* ===== NOVEL PILIHAN ===== */
-#novel {
-    background: linear-gradient(135deg,#e8f5e9,#fdfcf7);
-    padding: 40px !important;
-    border-radius: 20px;
-    box-shadow: 0 5px 18px rgba(53,94,59,.15);
-    margin: 30px auto;
+/* Kartu novel */
+#detail-novel .kartu-detail {
+    border: 1px solid #edf1ed;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#novel h2 {
-    font-size: 36px;
-    letter-spacing: 1px;
+#detail-novel .kartu-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
 }
 
-#novel h2::after { width: 80px; }
+/* Gambar sampul */
+#detail-novel .sampul-detail {
+    width: 190px;
+    height: 260px;
+    object-fit: contain;
+    margin: 15px auto 0;
+}
 
-#novel > p {
-    color: #5f6f60 !important;
-    font-size: 17px;
-    line-height: 1.8;
+/* Nama novel */
+#detail-novel .nama-novel {
+    color: #17633b;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+/* Genre novel */
+#detail-novel .genre-novel {
+    color: #42645d;
+    min-height: 48px;
+}
+
+/* Tombol */
+#detail-novel .btn-outline-success {
+    border-radius: 7px;
+    font-weight: 600;
+    padding: 10px;
 }
 
 /* ===== TENTANG RUANG NOVEL ===== */
-
 .tentang-section {
     background: linear-gradient(135deg,#e8f5e9,#f5faf3,#d9edda);
     padding: 70px 30px;
@@ -162,19 +289,9 @@
 
 .tentang-section .section-title {
     color: #1b5e20;
-    font-size: 2.5rem;
+    font-size: 38px;
     font-weight: 800;
     margin-bottom: 18px;
-}
-
-.tentang-section .section-title::after {
-    content: "";
-    display: block;
-    width: 85px;
-    height: 5px;
-    background: linear-gradient(to right,#81c784,#2e7d32);
-    border-radius: 10px;
-    margin: 18px auto 0;
 }
 
 .tentang-section .text-secondary {
@@ -247,31 +364,4 @@
 .footer p {
     color: #e4f3e5;
     font-size: .95rem;
-}
-
-/* ===== RESPONSIVE HP ===== */
-@media (max-width: 576px) {
-    #novel {
-        padding: 25px !important;
-        border-radius: 15px;
-    }
-
-    #novel h2 { font-size: 28px; }
-    #novel > p { font-size: 15px; }
-
-    .tentang-section { padding: 45px 0; }
-
-    .tentang-section .section-title { font-size: 1.8rem; }
-
-    .tentang-section .text-secondary {
-        font-size: .95rem;
-        padding: 0 10px;
-    }
-
-    .tentang-card {
-        padding: 23px;
-        border-radius: 17px;
-    }
-
-    .tentang-card h3 { font-size: 1.25rem; }
 }

@@ -1,46 +1,98 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-const loginForm = document.getElementById("loginForm");
+    const loginForm = document.getElementById("loginForm");
+    const loginPage = document.getElementById("login");
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+    if (!loginForm || !loginPage) return;
 
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
 
     const usernameError = document.getElementById("usernameError");
     const passwordError = document.getElementById("passwordError");
     const loginMessage = document.getElementById("loginMessage");
 
-    usernameError.textContent = "";
-    passwordError.textContent = "";
-    loginMessage.textContent = "";
-    loginMessage.className = "mt-3 text-center";
+    // Ambil bagian beranda selain halaman login
+    const bagianBeranda = Array.from(
+        document.body.children
+    ).filter(function (bagian) {
+        return bagian !== loginPage &&
+               bagian.tagName !== "SCRIPT";
+    });
 
-    let valid = true;
-    const polaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    function tampilkanLogin() {
+        loginPage.style.display = "";
 
-    if (username === "") {
-        usernameError.textContent = "Email wajib diisi.";
-        valid = false;
-    } else if (!polaEmail.test(username)) {
-        usernameError.textContent = "Email harus valid, contoh nama@gmail.com.";
-        valid = false;
+        bagianBeranda.forEach(function (bagian) {
+            bagian.style.display = "none";
+        });
     }
 
-    if (password.trim() === "") {
-        passwordError.textContent = "Password wajib diisi.";
-        valid = false;
-    } else if (password.length < 8) {
-        passwordError.textContent = "Password minimal 8 karakter.";
-        valid = false;
+    function tampilkanBeranda() {
+        loginPage.style.display = "none";
+
+        bagianBeranda.forEach(function (bagian) {
+            bagian.style.display = "";
+        });
+
+        window.scrollTo(0, 0);
     }
 
-    if (!valid) {
-        loginMessage.textContent = "Periksa kembali input kamu.";
-        loginMessage.classList.add("text-danger");
-        return;
+    // Periksa status ketika website dibuka
+    if (sessionStorage.getItem("ruangNovelLogin") === "berhasil") {
+        tampilkanBeranda();
+    } else {
+        tampilkanLogin();
     }
 
-    loginMessage.textContent = "Validasi berhasil!";
-    loginMessage.classList.add("alert", "alert-success");
+    // Proses login
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = username.value.trim();
+        const sandi = password.value;
+
+        usernameError.textContent = "";
+        passwordError.textContent = "";
+        loginMessage.textContent = "";
+        loginMessage.className = "mt-3 text-center";
+
+        let valid = true;
+        const polaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email === "") {
+            usernameError.textContent = "Email wajib diisi.";
+            valid = false;
+        } else if (!polaEmail.test(email)) {
+            usernameError.textContent = "Format email tidak valid.";
+            valid = false;
+        }
+
+        if (sandi.trim() === "") {
+            passwordError.textContent = "Password wajib diisi.";
+            valid = false;
+        } else if (sandi.length < 8) {
+            passwordError.textContent =
+                "Password minimal 8 karakter.";
+            valid = false;
+        }
+
+        if (!valid) {
+            loginMessage.textContent =
+                "Periksa kembali email dan password kamu.";
+            loginMessage.classList.add("text-danger");
+            return;
+        }
+
+        loginMessage.textContent =
+            "Login berhasil! Selamat datang di Ruang Novel ♡";
+        loginMessage.classList.add("text-success");
+
+        sessionStorage.setItem("ruangNovelLogin", "berhasil");
+
+        setTimeout(function () {
+            tampilkanBeranda();
+        }, 800);
+    });
+
 });
